@@ -17,5 +17,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name=".data.ModelContentProvider"
+            android:authorities="@string/provider_authority"
+            android:exported="true"
+            android:icon="@drawable/ic_bug"
+            android:label="@string/provider_name"
+            android:permission="@string/provider_permission"/>
     </application>
 </manifest>

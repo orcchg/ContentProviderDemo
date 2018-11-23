@@ -13,9 +13,8 @@ import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
 
-    private val modelAdapter = ModelAdapter()
-
-    private val app by lazy { application as HostApp }
+    private val dao by lazy { (application as HostApp).db.modelDao() }
+    private val modelAdapter by lazy { ModelAdapter() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,15 +22,15 @@ class MainActivity : AppCompatActivity() {
         rv_items.adapter = modelAdapter
 
         GlobalScope.launch {
-            Timber.i("Coroutine started")
+            Timber.i("Coroutine [fill on app init] started")
             // first operation - read models from assets and insert them into database
-            readModels(assets).also { app.db.modelDao().insertModels(it) }
+            readModels(assets).also { dao.insertModels(it) }
 
             // second operation - get models from the database and show them in UI list
-            app.db.modelDao().models()
+            dao.models()
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ modelAdapter.submitList(it) }, Timber::e)
-            Timber.i("Coroutine finished")
+            Timber.i("Coroutine [fill on app init] finished")
         }
     }
 }
