@@ -1,0 +1,88 @@
+{
+  "models":[
+    {
+      "id":1,
+      "name":"January",
+      "description":"Janus is the Roman god of gates and doorways, depicted with two faces looking in opposite directions. His festival month is January.",
+      "temperature":-21.5,
+      "season":"winter"
+    },
+    {
+      "id":2,
+      "name":"February",
+      "description":"Februa is the Roman festival of purification, held on February fifteenth. It is possibly of Sabine origin.",
+      "temperature":-12.2,
+      "season":"winter"
+    },
+    {
+      "id":3,
+      "name":"March",
+      "description":"March was the original beginning of the year, and the time for the resumption of war.",
+      "temperature":-3.2,
+      "season":"spring"
+    },
+    {
+      "id":4,
+      "name":"April",
+      "description":"Aphrodite is the Greek goddess of love and beauty. She is identified with the Roman goddess Venus.",
+      "temperature":7.8,
+      "season":"spring"
+    },
+    {
+      "id":5,
+      "name":"May",
+      "description":"Maia (meaning 'the great one') is the Italic goddess of spring, the daughter of Faunus, and wife of Vulcan.",
+      "temperature":18.7,
+      "season":"spring"
+    },
+    {
+      "id":6,
+      "name":"June",
+      "description":"Juno is the principle goddess of the Roman Pantheon. She is the goddess of marriage and the well-being of women. She is the wife and sister of Jupiter. She is identified with the Greek goddess Hera.",
+      "temperature":22.2,
+      "season":"summer"
+    },
+    {
+      "id":7,
+      "name":"July",
+      "description":"Julius Caesar reformed the Roman calendar (hence the Julian calendar) in 46 BC. In the process, he renamed this month after himself.",
+      "temperature":28.9,
+      "season":"summer"
+    },
+    {
+      "id":8,
+      "name":"August",
+      "description":"Augustus Caesar clarified and completed the calendar reform of Julius Caesar. In the process, he also renamed this month after himself.",
+      "temperature":20.4,
+      "season":"summer"
+    },
+    {
+      "id":9,
+      "name":"September",
+      "description":"September -- the seventh month",
+      "temperature":14.2,
+      "season":"autumn"
+    },
+    {
+      "id":10,
+      "name":"October",
+      "description":"October -- the eighth month",
+      "temperature":6.5,
+      "season":"autumn"
+    },
+    {
+      "id":11,
+      "name":"November",
+      "description":"November -- the nineth month",
+      "temperature":-5.3,
+      "season":"autumn"
+    },
+    {
+      "id":12,
+      "name":"December",
+      "description":"December -- the tenth month",
+      "temperature":-14.7,
+      "season":"winter"
+    }
+  ]
+}
