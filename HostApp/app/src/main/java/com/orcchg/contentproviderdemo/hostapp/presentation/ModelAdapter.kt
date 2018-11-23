@@ -16,7 +16,7 @@ class ModelAdapter : ListAdapter<Model, ModelViewHolder>(DiffCallback()) {
         setHasStableIds(true)
     }
 
-    override fun getItemId(position: Int): Long = getItem(position).id.toLong()
+    override fun getItemId(position: Int): Long = getItem(position).id.hashCode().toLong()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ModelViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.rv_item_layout, parent, false)
