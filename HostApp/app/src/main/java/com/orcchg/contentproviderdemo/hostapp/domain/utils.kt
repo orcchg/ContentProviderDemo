@@ -1,4 +1,4 @@
-package com.orcchg.contentproviderdemo.hostapp
+package com.orcchg.contentproviderdemo.hostapp.domain
 
 import android.content.res.AssetManager
 import com.google.gson.Gson
@@ -12,7 +12,7 @@ fun readAssetFile(am: AssetManager, filename: String): String {
     return String(buffer, Charset.forName("UTF-8"))
 }
 
-fun readAppModels(am: AssetManager): List<Model> {
-    val json = readAssetFile(am, "apps.json")
+fun readModels(am: AssetManager): List<Model> {
+    val json = readAssetFile(am, "models.json")
     return Gson().fromJson(json, ListModels::class.java).models
 }
