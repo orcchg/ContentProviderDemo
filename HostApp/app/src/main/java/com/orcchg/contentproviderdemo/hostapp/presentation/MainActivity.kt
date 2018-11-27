@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         GlobalScope.launch {
             Timber.i("Coroutine [fill on app init] started")
             // first operation - read models from assets and insert them into database
-            readModels(assets).also { dao.insertModels(it) }
+            readModels(assets).also { dao.insert(it) }
 
             // second operation - get models from the database and show them in UI list
             dao.models()
